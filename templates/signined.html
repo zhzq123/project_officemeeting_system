@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h2>没有收到邮件？</h2>
+  {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+  <form action="{{ url_for('signined') }}" method=post>
+    <dl>
+      <dd><input type=submit name =send_email_again value=send_email_again></dd>
+    </dl>
+  </form>
+{% endblock %}
